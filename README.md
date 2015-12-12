@@ -1,5 +1,5 @@
 # Motivation
-Truncate an array of strings into a single string which contains as much strings as possible 
+Truncate an array of strings into a single string which contains as much items as possible 
 and still displays the number of hidden strings
 
 ## USE CASES

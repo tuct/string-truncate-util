@@ -49,7 +49,7 @@ var truncate = truncateUtil(options);
 ```javascript
 var truncateUtil = require('string-truncate-util');
 //set options 
-var truncate = truncateUtil({maxLength: 15});
+var truncate = truncateUtil({maxLength: 25});
 //use functions
 truncate.string("Test this with a normal string");
 truncate.arrayOfStrings(["Test this","with","an","array"]);
@@ -61,4 +61,27 @@ truncate.arrayOfStrings(["Test this","with","an","array"]);
 truncate.string('hello world', 7);
 
 // hell...
+```
+
+### truncate array of string
+```javascript
+
+truncate.arrayOfStrings([tobi","manf","hubsi","otto","hildergrad]);
+// tobi, manf, hubsi, 2 more
+
+```
+### truncate text and count words
+```javascript
+var truncate = truncateUtil({
+	maxLength: 70,
+	nodes: {
+		paddingChar: null,
+		separator: " ",
+		moreSuffix: ", %d more words"
+	}
+});
+var text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut iaculis justo, tincidunt consequat sapien. Sed ultricies sagittis metus, at consequat elit venenatis a. Aliquam.";
+truncate.arrayOfStrings(text.split(" "));
+// Lorem ipsum dolor sit amet, consectetur adipiscing e..., 17 more words
+
 ```

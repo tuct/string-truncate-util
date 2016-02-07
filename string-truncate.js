@@ -108,5 +108,5 @@ var StringTruncate = function(options){
 	  }
 	};
 }
-if(module != undefined)
-module.exports = StringTruncate;
+if(typeof(module) !== 'undefined')
+	module.exports = StringTruncate;

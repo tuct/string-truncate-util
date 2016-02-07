@@ -2,7 +2,7 @@
   "name": "string-truncate-util",
   "version": "1.0.0",
   "description": "Functions to truncate strings and array of strings",
-  "main": "index.js",
+  "main": "string-truncate.js",
   "scripts": {
     "test": "mocha --recursive",
     "test-coverage": "istanbul.cmd cover .\\node_modules\\mocha\\bin\\_mocha"
